@@ -1,0 +1,94 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string>
+ 
+int main() {
+ std::string str = "hold";
+  /* We're playing rock, paper, scissors, spock.
+  This program will play it with you.
+  */
+
+//All my variables
+int rock = 1;
+int paper = 2;
+int scis = 3;
+int liz = 4;
+int spock = 5;
+
+int computer = rand() % 5 + 1;
+int player = 0;
+//Explaining the game
+ std::cout << "Let's play Rock, Paper, Scissors, Spock!\n";
+ std::cout << "Scissors cuts Paper.\nPaper covers Rock.\nRock crushes Lizard.\n";
+ std::cout << "Lizard poisons Spock.\nSpock smashes Scissors\nScissors decapitate Lizard.\n";
+ std::cout << "Lizard eats Paper.\nPaper disproves Spock.\nSpock vaporizes Rock.\n";
+ 
+
+//Starting the game.
+std::cout << "Are you ready? Enter Start.\n";
+std::cin >> str; 
+std::cout << "1. Rock!\n2. Paper!\n3, Scissors\n4. Lizard!\n5. Spock!\nShoot!\n";
+
+std::cin >> player;
+
+//Computer states what they play
+if (computer == rock){
+  std::cout << "I choose rock!\n";
+}
+else if (computer == paper){
+  std::cout << "I choose paper!\n";
+}
+else if (computer == scis){
+  std::cout << "I choose scissors!\n";
+}
+else if (computer == liz){
+  std::cout << "I choose lizard!\n";
+}
+else if (computer == spock){
+  std::cout << "I choose Spock!\n";
+}
+
+
+if (player == rock && computer == scis) {
+    std::cout << "You Win!\n";} 
+    
+else if (player == scis && computer == paper) {
+    std::cout << "You Win!\n";
+  } 
+else if (player == paper && computer == rock) {
+    std::cout << "You Win!\n";} 
+    
+else if (player == liz && computer == spock) {
+    std::cout << "You Win!\n";   } 
+
+else if (player == spock && computer == scis) {
+      
+    std::cout << "You Win!\n";
+      
+  } else if (player == scis && computer == liz) {
+      
+    std::cout << "You Win!\n";
+      
+  } else if (player == liz && computer == paper) {
+      
+    std::cout << "You Win!\n";
+      
+  } else if (player == paper && computer == spock) {
+      
+    std::cout << "You Win!\n";
+      
+  } else if (player == spock && computer == rock) {
+      
+    std::cout << "You Win!\n";
+  } else if (player == rock && computer == liz) {
+    std::cout << "You Win!\n";}
+    
+     else if (player == computer) {
+    std::cout << "Tie!\n";}
+    
+     else {
+    std::cout << "You Lose!\n";}
+
+
+
+}
